@@ -1,0 +1,33 @@
+
+body {
+    border: 20px solid #000000;
+}
+
+.header {
+    text-align: center;
+    background-color: #bb2200;
+    color: #ffffff;
+    height: 5%;
+}
+
+.left {
+    float: left;
+    width: 45%;
+    max-width: 45%;
+}
+
+.right {
+    float: right;
+    width: 45%;
+    max-width: 45%;
+}
+
+.clearfix {
+    overflow: auto;
+    clear: both;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
