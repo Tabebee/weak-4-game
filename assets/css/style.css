@@ -37,6 +37,9 @@ body {
 
 footer {
     text-align: center;
+    background: #bb2200;
+    color: #ffffff;
+    padding: 20px;
 }
 
 h1 {
