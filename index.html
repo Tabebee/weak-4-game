@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crystal Collector Game</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Crystal Collector Game</title>
 </head>
 <body background="assets/images/merely_cubed.png">
     <header>
@@ -12,26 +16,36 @@
     </header>
 
     <section class="left">
-        Text for the game will go here
+        <h3> Rules</h3>
+        <p> You will start out with a randomly generated number.</p>
+        <p> By now you should have noticed that there are 4 different colored crystals below.
+            Each of those crystals has a different value assigned to it. Every time you click one of them
+            the value of the crystal will be added to "Your Number."</p>
+        <p> Match "Your Number" with the "Target Number" and you Win! Go over the Target Number and you lose</p>
+        <p> The value for each crystal is a mystery for you...... until you click them!</p>
+        <p> If that wasn't enough well the value of each crystal will also change after a win or loss!</p>
+
     </section>
 
-    <section class="right">
-        To the Right of above container
+    <div class="right">
+        <h2> Score Board</h2>
         <p>Wins: <span id="wins"> </span></p>
         <p>Losses: <span id="losses"> </span></p>
-        <button id="button"> </button>
-        <p>Below will be the random number and Target number</p>
-        <p> Your Number <span id="userrandom"> </span></p>
-        <p> Target Number <span id="target"> </span></p>
-    </section>
+        <p> Your Number: <span id="user"></span></p>
+        <p> Target Number: <span id="target"> </span></p>
+    </div>
 
     <section class="clearfix">
-        Images will go here
+        <button id="blue"><img src="assets/images/blue-crystal.png" alt="blue-crystal"></button>
+        <button id="green"><img src="assets/images/green-crystal.png" alt="green-crystal"></button>
+        <button id="red"><img src="assets/images/red-crystal.png" alt="red-crystal"></button>
+        <button id="yellow"><img src="assets/images/yellow-crystal.png" alt="yellow-crystal"></button>
     </section>
 
-<footer>
-    Copyright Tabish Akhtar
-</footer>
+    <footer>
+        &copy; Copyright Tabish Akhtar
+    </footer>
 
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
