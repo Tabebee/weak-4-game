@@ -11,7 +11,7 @@ $(document).ready(function () {
     function start() {
         var user = 0;
 
-        var targetNum = Math.floor(Math.random() * 100) + 19;
+        var targetNum = Math.floor(Math.random() * 102) + 19;
         $("#target").html(targetNum);
 
         var blueCrystal = Math.floor(Math.random() * 12) + 1;
@@ -75,5 +75,9 @@ $(document).ready(function () {
             }
         });
     }
+    function reset() {
+        
+    }
+
     start();
 });
