@@ -7,9 +7,10 @@ $(document).ready(function () {
 //******************* Cant figure out why it keeps logging old user value when game restarts?
 //******************* Only affects game if old user value is one click away from new target value
 //******************* So after about 4 runs You will lose no matter what
-
     function start() {
         var user = 0;
+        var crystals = 0;
+        var value = 0;
 
         var targetNum = Math.floor(Math.random() * 102) + 19;
         $("#target").html(targetNum);
@@ -22,9 +23,11 @@ $(document).ready(function () {
 
         $("#blue").on("click", function () {
             // blueCrystal;
-            user += blueCrystal;
-            console.log('user: ', user);
-            $("#user").html(user);
+            // user += blueCrystal;
+            crystals += blueCrystal;
+            console.log('user: ', user, 'crystals: ', crystals);
+            value = user + crystals;
+            $("#user").html(value);
         });
 
         $("#green").on("click", function () {
@@ -32,7 +35,6 @@ $(document).ready(function () {
             user += greenCrystal;
             console.log('user: ', user);
             $("#user").html(user);
-
         });
 
         $("#red").on("click", function () {
@@ -59,25 +61,23 @@ $(document).ready(function () {
         //************************************************************
 
         $(document).on("click", ".crystal", function () {
-            if (user === targetNum) {
+            if (value === targetNum) {
                 alert("You win");
                 wins++;
                 $("#wins").html(wins);
-                user = 0;
+                crystals = 0;
+                value = 0;
                 start();
             }
-            else if (user > targetNum) {
+            else if (value > targetNum) {
                 alert("you lose");
                 losses++;
                 $("#losses").html(losses);
-                user = 0;
+                crystals = 0;
+                value = 0;
                 start();
             }
         });
     }
-    function reset() {
-        
-    }
-
     start();
 });
